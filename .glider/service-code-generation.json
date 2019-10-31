@@ -1,0 +1,20 @@
+{
+  "version" : 1,
+  "actionId" : "service-code-generation",
+  "userInputs" : {
+    "gitorgname" : "dc",
+    "gitreponame" : "notifications_load_test",
+    "javaversion" : "v11",
+    "asrfeatures" : "",
+    "otherfeatures" : "",
+    "nginx" : "no",
+    "class" : "AppServer",
+    "rubyversion" : "v2",
+    "goversion" : "v1",
+    "appname" : "notificationsloadtest",
+    "language" : "go",
+    "technology" : "",
+    "category" : "",
+    "apiname" : "myfirstapi"
+  }
+}

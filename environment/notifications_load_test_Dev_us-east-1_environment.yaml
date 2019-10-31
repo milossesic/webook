@@ -1,0 +1,14 @@
+
+---
+runtime_env_vars:
+
+- key: DD_TAGENV_GIT_SHA
+  value: MARATHON_APP_LABEL_CONTAINER
+
+- key: DD_APP_KEY
+  secret_ref: /secret/ethos/tenants/cloudtech_doc_cloud/dc/common/Dev/DataDog-Dev-Custom-Metrics-Application-Key
+  field: Password
+
+- key: DD_API_KEY
+  secret_ref: /secret/ethos/tenants/cloudtech_doc_cloud/dc/common/Dev/DataDog-Dev-Agent-API-Key
+  field: Password

@@ -1,0 +1,7 @@
+# AppPort is port on which service will be started
+AppPort: "8080"
+# LogLevel decides the logging level
+LogLevel: "debug"
+# RequestTimeout is the time duration after which request will be timedout
+# and returns 408 request timeout error
+RequestTimeout: 60s

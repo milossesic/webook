@@ -1,0 +1,10 @@
+version: '2'
+services:
+  web:
+    build: .
+    ports:
+     - "8081:8081"
+    environment:
+     - ENVIRONMENT_NAME=local
+     - REGION_NAME=local
+     - ASR_APPENDER=JSON_CONSOLE_APPENDER

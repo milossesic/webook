@@ -1,0 +1,19 @@
+# Using golang:1.10-alpine3.7, as go cover is not installed in bbc.
+# Here is a link to jira for the same - https://jira.corp.adobe.com/browse/ASR-6569
+FROM golang:1.10-alpine3.7
+
+ENV GOBIN="/usr/local/bin" \
+    GOWORKDIR="/go/src/git.corp.adobe.com/dc/notifications_load_test"
+
+RUN mkdir -p ${GOWORKDIR}
+
+RUN apk add --no-cache -qU curl git make bash && \
+    curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh && \
+    apk del curl
+
+RUN go get github.com/onsi/ginkgo/ginkgo && \
+    go get github.com/onsi/gomega
+
+WORKDIR ${GOWORKDIR}
+
+CMD ["sh", "-c", "dep ensure && go build main.go"]
